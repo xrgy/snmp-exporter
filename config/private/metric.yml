@@ -1,0 +1,360 @@
+default:
+  metrics:
+  - type: hh3cEntityExtCpuUsage
+    allmetrics:
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.25506.12.41886.2
+      policy: nonezero
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.25506.2.6.1.1.1.1.6
+      policy: nonezero
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.1.7
+#huawei multi results without entityname
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.2011.6.1.1.1.2
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        value: "Board"
+#huawei
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.5
+      policy: nonezero
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+#ruijie
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.4881.1.1.10.2.36.1.1.1
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        value: "Board"
+#cisco
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.9.9.109.1.1.1.1.5
+      policy: default
+      indexs:
+      - name: cpuindex
+        oid: 1.3.6.1.4.1.9.9.109.1.1.1.1.2
+        indexs:
+        - name: entPhysicalName
+          oid: 1.3.6.1.2.1.47.1.1.1.1.7
+#test
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.6486.800.1.2.1.16.1.1.1.13
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.9.9.109.1.1.1.1.7
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.207.8.4.4.3.3.3
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.14823.2.2.1.2.1.13.1.3
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.8744.5.21.1.1.8
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.2272.1.1.20
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.45.1.6.3.8.1.1.5
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.2636.3.1.13.1.8
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.11.2.14.11.5.1.9.6.1
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.5624.1.2.49.1.1.1.1.2
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.9.2.1.56
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.9.9.109.1.1.1.1.3
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.9.9.109.1.1.1.1.6
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.9.9.305.1.1.1
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.6527.3.1.2.1.1.1
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.89.35.1.54
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.89.35.1.113
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.43.45.1.2.17.1.2.3.1.1.4
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.43.45.1.6.1.1.1.2
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.43.45.1.2.2.4.12
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.43.45.1.6.3.4.1.2
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.248.14.2.15.2.1
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.1012.230.6.1.1.1.2
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.1012.230.2.2.4.12
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.1012.230.6.3.4.1.2
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.3224.16.1.3
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.2011.6.1.1.1.2
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.2011.2.2.4.12
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+    - name: hh3cEntityExtCpuUsage
+      oid: 1.3.6.1.4.1.2011.6.3.4.1.2
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.7
+  - type: hh3cEntityExtMemUsage
+    allmetrics:
+    - name: hh3cEntityExtMemUsage
+      oid: 1.3.6.1.4.1.25506.2.6.1.1.1.1.8
+      policy: nonezero
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.1.7
+    - name: hh3cEntityExtMemUsage
+      oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.7
+      policy: nonezero
+      indexs:
+      - name: entPhysicalName
+        oid: 1.3.6.1.2.1.47.1.1.1.1.7
+    - name: hh3cEntityExtMemUsage
+      oid: 1.3.6.1.4.1.2011.2.17.1.2.3.1.1.5
+    - name: hh3cEntityExtMemUsage
+      oid: 1.3.6.1.4.1.2011.2.17.1.2.3.10.1.5
+    - name: hh3cEntityExtMemUsage
+      oid: 1.3.6.1.4.1.25506.12.41886.3
+    - name: hh3cEntityExtMemUsage
+      oid: 1.3.6.1.4.1.6486.800.1.2.1.16.1.1.1.9
+    - name: hh3cEntityExtMemUsage
+      oid: 1.3.6.1.4.1.9.9.305.1.1.2
+    - name: hh3cEntityExtMemUsage
+      oid: 1.3.6.1.4.1.2636.3.1.16
+    - name: hh3cEntityExtMemUsage
+      oid: 1.3.6.1.4.1.1012.230.2.17.1.2.3.1.1.5
+    - name: hh3cEntityExtMemUsage
+      oid: 1.3.6.1.4.1.1012.230.2.17.1.2.3.10.1.5
+#ruijie
+    - name: hh3cEntityExtMemUsage
+      oid: 1.3.6.1.4.1.4881.1.1.10.2.35.1.1.1.3.1
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        value: "Board"
+    - name: hh3cEntityExtMemUsage
+      oid: 1.3.6.1.4.1.43.45.1.2.17.1.2.3.10.1.5
+    - name: hh3cEntityExtMemUsage
+      oid: 1.3.6.1.4.1.43.45.1.2.17.1.2.3.1.1.5
+  - type: memoryfree
+    allmetrics:
+    - name: memoryfree
+      oid: 1.3.6.1.4.1.2011.2.2.5.2
+      policy: default
+#huawei s3928tp,s8505
+    - name: memoryfree
+      oid: 1.3.6.1.4.1.2011.6.1.2.1.1.3
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        value: "Board"
+    - name: memoryfree
+      oid: 1.3.6.1.4.1.3224.16.2.2
+      policy: default
+    - name: memoryfree
+      oid: 1.3.6.1.4.1.1012.230.6.3.5.1.1.3
+      policy: default
+    - name: memoryfree
+      oid: 1.3.6.1.4.1.9.9.48.1.1.1.6
+      policy: default
+    - name: memoryfree
+      oid: 1.3.6.1.4.1.11.2.14.11.5.1.1.2.1.1.1.6
+      policy: default
+    - name: memoryfree
+      oid: 1.3.6.1.4.1.43.45.1.6.1.2.1.1.3
+      policy: default
+    - name: memoryfree
+      oid: 1.3.6.1.4.1.1012.230.2.2.5.2
+      policy: default
+    - name: memoryfree
+      oid: 1.3.6.1.4.1.1012.230.6.1.2.1.1.3
+      policy: default
+    - name: memoryfree
+      oid: 1.3.6.1.4.1.248.14.2.15.3.2
+      policy: default
+    - name: memoryfree
+      oid: 1.3.6.1.4.1.43.45.1.2.2.5.2
+      policy: default
+    - name: memoryfree
+      oid: 1.3.6.1.4.1.43.45.1.6.3.5.1.1.3
+      policy: default
+    - name: memoryfree
+      oid: 1.3.6.1.4.1.9.9.48.1.1.1.6.1
+      policy: default
+  - type: memorytotal
+    allmetrics:
+    - name: memorytotal
+      oid: 1.3.6.1.4.1.2011.6.1.2.1.1.2
+      policy: default
+      indexs:
+      - name: entPhysicalName
+        value: "Board"
+    - name: memorytotal
+      oid: 1.3.6.1.4.1.1012.230.6.3.5.1.1.2
+      policy: default
+    - name: memorytotal
+      oid: 1.3.6.1.4.1.14823.2.2.1.2.1.15.1.2
+      policy: default
+    - name: memorytotal
+      oid: 1.3.6.1.4.1.11.2.14.11.5.1.1.2.1.1.1.5
+      policy: default
+    - name: memorytotal
+      oid: 1.3.6.1.4.1.43.45.1.6.1.2.1.1.2
+      policy: default
+    - name: memorytotal
+      oid: 1.3.6.1.4.1.1012.230.6.1.2.1.1.2
+      policy: default
+    - name: memorytotal
+      oid: 1.3.6.1.4.1.43.45.1.6.3.5.1.1.2
+      policy: default
+  - type: memoryused
+    allmetrics:
+    - name: memoryused
+      oid: 1.3.6.1.4.1.2011.2.2.5.1
+      policy: default
+    - name: memoryused
+      oid: 1.3.6.1.4.1.3224.16.2.1
+      policy: default
+    - name: memoryused
+      oid: 1.3.6.1.4.1.14823.2.2.1.2.1.15.1.3
+      policy: default
+    - name: memoryused
+      oid: 1.3.6.1.4.1.9.9.48.1.1.1.5
+      policy: default
+    - name: memoryused
+      oid: 1.3.6.1.4.1.1012.230.2.2.5.1
+      policy: default
+    - name: memoryused
+      oid: 1.3.6.1.4.1.248.14.2.15.3.1
+      policy: default
+    - name: memoryused
+      oid: 1.3.6.1.4.1.43.45.1.2.2.5.1
+      policy: default
+    - name: memoryused
+      oid: 1.3.6.1.4.1.9.9.48.1.1.1.5.1
+      policy: default
