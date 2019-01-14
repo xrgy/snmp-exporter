@@ -29,13 +29,13 @@ func GetNetworkDeviceInterfaces(w http.ResponseWriter,r *http.Request)  {
 	snmp.Retries = 2
 	snmp.Timeout = time.Second * 10
 	snmp.Target =  monitor_info.IP
-	tempPort,err:= strconv.ParseInt(monitor_info.Params_maps["port"],10,16)
+	tempPort,err:= strconv.ParseInt(monitor_info.Port,10,16)
 	if err!=nil {
 		log.Printf("error type port:%s,%s",tempPort,err.Error())
 		return
 	}
 	snmp.Port = uint16(tempPort) //应该是将tempPort转化
-	switch monitor_info.Params_maps["snmp_version"] {
+	switch monitor_info.Snmp_version {
 	case "1":
 		snmp.Version = gosnmp.Version1
 		break
@@ -46,7 +46,7 @@ func GetNetworkDeviceInterfaces(w http.ResponseWriter,r *http.Request)  {
 		snmp.Version = gosnmp.Version3
 		break
 	}
-	snmp.Community = monitor_info.Params_maps["read_community"]
+	snmp.Community = monitor_info.Read_community
 	err = snmp.Connect()
 	if err!=nil {
 		log.Printf("connect to the target %s error,%s",snmp.Target,err.Error())

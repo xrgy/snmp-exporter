@@ -37,6 +37,7 @@ type RemInfo struct {
 
 func GetLldpInfo(w http.ResponseWriter,r *http.Request){
 	params := mux.Vars(r)
+	//todo 不需要这个uuid 二级规格 因为都在网络设备表里面
 	id := params["uuid"]
 	var lldpinfo []Lldpinfo
 	monitorInfos := config.GetlldpMonitorInfo(id)
@@ -50,9 +51,9 @@ func GetLldpInfo(w http.ResponseWriter,r *http.Request){
 		if strings.Contains(s,"100% packet loss") {
 			continue
 		}
-		snmp_version := monitor_info.Params_maps["snmp_version"]
-		community := monitor_info.Params_maps["read_community"]
-		port := monitor_info.Params_maps["port"]
+		snmp_version := monitor_info.Snmp_version
+		community := monitor_info.Read_community
+		port := monitor_info.Port
 		if port == "" {
 			port = "161"
 		}

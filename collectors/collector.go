@@ -73,7 +73,7 @@ func (c Collector) Collect(ch chan<- prometheus.Metric) {
 		return
 	}
 	defer (&scrape).Snmp.Conn.Close()
-	_,err:=(*scrape).Snmp.Get([]string{"1.3.6.1.2.1.1.2"})
+	_,err=(*scrape).Snmp.Get([]string{"1.3.6.1.2.1.1.2"})
 	if err!=nil {
 		log.Printf("error connecting to target %s: %s",targetIP,err.Error())
 		ch <- prometheus.MustNewConstMetric(prometheus.NewDesc("snmp_monitorstatus","snmp monitor status",nil,nil),
@@ -137,7 +137,7 @@ PrivateLoop:
 
 	snmp := (*scrape).Snmp
 	module := (*scrape).Module
-	start := time.Now()
+	start = time.Now()
 	pdus, err := ScrapeTarget(snmp, module)
 	if err != nil {
 		log.Printf("Error scraping target %s: %s", snmp.Target, err)
@@ -272,14 +272,14 @@ func getLabels(snmp gosnmp.GoSNMP, index *config.NMetric, indexs []string) (conf
 func (c Collector) newSNMPScraper(ch chan<- prometheus.Metric) (*SnmpScraper, error) {
 	monitor_info := config.GetMonitorInfo(c.Target)
 	ip := monitor_info.IP
-	moduleName := monitor_info.Params_maps["module"]
-	snmp_version := monitor_info.Params_maps["snmp_version"]
-	community := monitor_info.Params_maps["read_community"]
-	port := monitor_info.Params_maps["port"]
+	//moduleName := monitor_info.Params_maps["module"]
+	snmp_version := monitor_info.Snmp_version
+	community := monitor_info.Read_community
+	port := monitor_info.Port
 	if port == "" {
 		port = "161"
 	}
-	if ip == "" || moduleName == "" || snmp_version == "" || community == "" {
+	if ip == ""  || snmp_version == "" || community == "" {
 		log.Printf("not enough monitor_info parameters")
 		return nil, errors.New("not enough monitor_info parameters")
 	}
@@ -306,7 +306,7 @@ func (c Collector) newSNMPScraper(ch chan<- prometheus.Metric) (*SnmpScraper, er
 		return nil, err
 	}
 	module := &config.Module{}
-	module, ok := (*cfg)[moduleName]
+	module, ok := (*cfg)["network_device"]
 	if !ok {
 		return nil, errors.New("error get snmp,yml")
 	}
@@ -330,7 +330,7 @@ func (c Collector) newSNMPScraper(ch chan<- prometheus.Metric) (*SnmpScraper, er
 	}
 	snmp.Community = snmp_auth.Community
 	scraper := SnmpScraper{
-		TargetType: moduleName,
+		//TargetType: moduleName,
 		Module:     module,
 		Snmp:       snmp,
 	}
